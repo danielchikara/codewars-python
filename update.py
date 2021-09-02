@@ -1,15 +1,7 @@
 def find_outlier(integers):
-    odd_number = []
-    even_number = []
-    for n in integers:
-        if n % 2 == 0:
-            odd_number.append(n)
-        else:
-            even_number.append(n)
-    if len(odd_number) == 1:
-        return odd_number[0]
-    else:
-        return even_number[0]
+    odd = [n for n in integers if n%2 !=0]
+    even = [n for n in integers if n%2 == 0]
+    return even[0] if len(even)<len(odd)else odd[0]
 
 
 
